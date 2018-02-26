@@ -1,0 +1,16 @@
+<div *ngIf="user" class="custom-padding">
+    <div class="car">
+        <img src="{{user.avatarPath}}" alt="AVATAR" style="width:100%">
+        <div class="cont">
+            <h1>{{user.name}}</h1>
+            <p>{{user.email}}</p>
+            <div style="margin: 24px 0;">
+                <a href="#"><i class="fa fa-dribbble"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+            </div>
+            <p><button>Contact</button></p>
+        </div>
+    </div>
+</div>

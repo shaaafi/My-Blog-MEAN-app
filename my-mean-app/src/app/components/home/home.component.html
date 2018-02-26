@@ -1,0 +1,34 @@
+<div class="text-center jumbotron">
+    <div class="page-header">
+        <h1>Your Favourite Blog</h1>
+        <h2>Authentic Substantial Doubtless</h2>
+    </div>
+    <h3>Please Login in order to Post blog</h3>
+    <a (click)="openModalWithLoginComponent()" class="btn btn-primary btn-lg" style="margin-right: 20px"><span class="glyphicon glyphicon-log-in"></span> LogIn</a>
+    <a (click)="openModalWithRegisterComponent()" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-user"></span>  Register</a>
+</div>
+
+<div class="container" id="my-padding">
+    <div *ngIf="blogs">
+        <div class="row">
+            <div class="col-md-4" *ngFor="let blog of blogs | paginate: { itemsPerPage: 9, currentPage: page, id:'foo' }">
+                <div>
+                    <a [routerLink]="['/detailBlog',blog._id]">
+                        <div class="thumbnail">
+                            <img src="{{blog.avatarPath}}" alt="avatar">
+                            <div class="caption">
+                                <h4 id="title">Title : {{blog.title}}</h4>
+                                <h5>Author: {{blog.auther.name}}</h5>
+                                <p>Created At: {{blog.createdAt | date:'medium'}}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div style="text-align: center">
+    <pagination-controls id="foo" (pageChange)="page = $event" directionLinks="true"></pagination-controls>
+</div>

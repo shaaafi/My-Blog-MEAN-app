@@ -1,0 +1,40 @@
+.th-second {
+    box-shadow: 3px 3px 5px gray;
+    position: relative;
+    transition: position 1s;
+    border: 1px solid lightgray;
+}
+
+.th-second:hover {
+    bottom: 3px;
+}
+
+.custom-padding {
+    padding-top: 100px
+}
+
+.bt-width {
+    width: 100%
+}
+
+.b-width {
+    max-width: 80px
+}
+
+@media screen and (max-width:990px) {
+    .t {
+        display: block;
+    }
+    .t1 {
+        display: none;
+    }
+}
+
+@media screen and (min-width:991px) {
+    .t {
+        display: none;
+    }
+    .t1 {
+        display: block;
+    }
+}

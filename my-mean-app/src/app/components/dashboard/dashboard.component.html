@@ -1,0 +1,42 @@
+<div class="container-fluid custom-padding">
+    <div class="row">
+        <div class="col-sm-12 col-md-2 t">
+            <div class="thumbnail text-center">
+                <h2>Your blogs <span class="badge" style="font-size: 1.5em;font-weight: 700">{{blogs.length}}</span></h2>
+                <button class="btn btn-primary btn-lg bt-width" (click)="goToAdd()">Add Blog</button>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-10">
+            <div class="thumbnail" style="padding: 30px 15px">
+                <div *ngIf="blogs;else err">
+                    <ul class="list-group">
+                        <li class="list-group-item text-center" *ngFor="let blog of blogs">
+                            <div class="row">
+                                <div class="col-sm-3  col-xs-4">
+                                    <img src="{{blog.avatarPath}}" alt="avatar">
+                                </div>
+                                <div class="col-sm-6 col-xs-8">
+                                    <h4 id="title">Title : {{blog.title}}</h4>
+                                    <p>Created At: {{blog.createdAt | date:'medium'}}</p>
+                                </div>
+                                <div class="col-sm-3 col-xs-12 text-right">
+                                    <a class="btn btn-primary b-width" [routerLink]="['/updateBlog',id]"><i class="fa fa-edit"></i> Edit</a>
+                                    <a class="btn btn-primary b-width"><i class="fa fa-remove"></i> Delete</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-2 t1">
+            <div class="thumbnail text-center">
+                <h2>Your blogs <span class="badge" style="font-size: 1.5em;font-weight: 700">{{blogs.length}}</span></h2>
+                <button class="btn btn-primary btn-lg bt-width" (click)="goToAdd()">Add Blog</button>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-template #err>
+    <div class="alert alert-danger">Your blogs are not loaded due to connection error</div>
+</ng-template>

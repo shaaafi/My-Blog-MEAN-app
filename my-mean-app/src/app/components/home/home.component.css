@@ -1,0 +1,38 @@
+.btn {
+    position: relative;
+    bottom: 0px;
+    box-shadow: 0 0;
+    transition: position 500ms, box-shadow 500ms;
+}
+
+.btn:hover {
+    bottom: 5px;
+    box-shadow: 7px 7px 5px grey;
+}
+
+img {
+    width: 100%;
+}
+
+.thumbnail {
+    box-shadow: 3px 3px 5px gray;
+    position: relative;
+    transition: position 1s;
+    border: 1px solid lightgray;
+}
+
+.thumbnail:hover {
+    bottom: 3px;
+}
+
+#title {
+    font-size: 25px;
+}
+
+#my-padding {
+    padding: 40px 1px;
+}
+
+a {
+    text-decoration: none
+}

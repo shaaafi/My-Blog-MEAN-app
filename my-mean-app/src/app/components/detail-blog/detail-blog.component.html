@@ -1,0 +1,14 @@
+<div class="custom-padding">
+    <div *ngIf="blog">
+        <div class="container">
+            <div class="thumbnail text-center">
+                <div class="caption">
+                    <h1>{{blog.title}}</h1>
+                    <h3><img src="{{blog.auther.avatarPath}}" alt="image" class="img-circle" width="50px" height="50px"> {{blog.auther.name}} <small>{{blog.createdAt | date:'medium'}}</small></h3>
+                    <img src="{{blog.avatarPath}}" class="img-thumbnail">
+                    <p class="pad">{{blog.content}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
